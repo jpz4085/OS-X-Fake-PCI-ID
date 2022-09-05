@@ -10,16 +10,9 @@ Note: FakePCIID_Intel_HD_Graphics.kext works for HD4400 mobile, HD4600 mobile, H
 In any case, a DSDT patch, FakeID configuration (Clover), or FakeProperties dictionary in the injector's Info.plist will be required to inject the properties that FakePCIID can read on the IOPCIDevice.  The properties used by FakePCIID are described later in this post.  The properties must be present on the PCIDevice that is being hooked (the direct parent of FakePCIID).
 
 
-### Downloads:
-
-Downloads are available on Bitbucket:
-
-https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/
-
-
 ### How to Install
 
-In all cases, FakePCIID.kext must be installed with a kext installer (such as Kext Wizard).  The Release build should be used for normal installs.  It has a minimum of output to system.log.  For troubleshooting, the Debug build can be used.
+FakePCIID.kext should be injected by Clover or OpenCore and not installed to the system partition.  The Release build should be used for normal installs.  It has a minimum of output to system.log.  For troubleshooting, the Debug build can be used.
 
 The separate folder 'injectors' in the distribution zip contains two extra codeless kexts:
 
@@ -92,7 +85,7 @@ end;
   By using FakePCIID, we can remap the PCI IDs back to AR9280 (`168c:002a`) even though the device itself is reporting `168c:0034`.
 
 
-- FakePCIID_Broadcom_WiFi.kext (formerly FakePCIID_BCM94352Z_as_BCM94360CS2.kext)
+- FakePCIID_Broadcom_WiFi.kext: (formerly FakePCIID_BCM94352Z_as_BCM94360CS2.kext)
   This kext will attach to `14e4:43b1`, `14e4:4357`, `14e4:4331`, `14e4:4353`, `14e4:432b`, `14e4:43ba`, `14e4:43a3`, or `14e4:43a0`.
   And also `106b:4e`, `14e4:4312`, `14e4:4313`, `14e4:4318`, `14e4:4319`, `14e4:431a`, `14e4:4320`, `14e4:4324`, `14e4:4325`, `14e4:4328`, `14e4:432c`, `14e4:432d`.
 
@@ -109,22 +102,20 @@ end;
    Further details here: http://www.tonymacx86.com/network/156135-intel-network-adapters-os-x-small-tree-drivers.html
 
 
-- FakePCIID_XHCIMux.kext
+- FakePCIID_XHCIMux.kext:
    This kext will attach to `8086:1e31`, `8086:9c31`, `8086:9cb1`, `8086:9c31`, and `8086:8cb1`
    This injector is a bit of an extension to normal FakePCIID duties.  It doesn't actually fake any PCI IDs.  Rather, it forces certain values to XUSB2PR (PCI config offset 0xD0) on the Intel XHCI USB3 controller.  The effect is to route any USB2 devices attached to the USB2 pins on the XHC ports to EHC1.  In other words, handle USB2 devices with the USB2 drivers instead of the USB3 drivers (AppleUSBEHCI vs. AppleUSBXHCI).
 
    So normally what is a complex "multiplex" DSDT patch (that is not well understood), is a simple kext install.
 
    Configuration properties and their defaults:
-    RM,pr2-force <00 00 00 00>.  By default forces all XHCI ports to route USB2 devices to EHC1.
-    RM,pr2-init <01>.  Will write RM,pr2-force value at startup if non-zero.
-    RM,pr2-block <01>.  Will block writes to XUSB2PR if non-zero.
-    RM,pr2m-block <01>.  No evidence that OS X drivers attempt to write XUSB2PRM (offset 0xD4), but since this kext relies on a valid value here (as provided by the BIOS), writes to it are blocked if non-zero.
-    RM,pr2-honor-pr2m <01>:  Changes to XUSB2PR will be masked by XUSB2PRM if this is non-zero.
-    RM,pr2-chipset-mask: Writes to XUSB2PR are masked by this value.  This is defined by the chipset documentation.  Default value depends on chipset.
-
-   Refer to Intel 7/8/9-series chipset data sheet for more info.
-
+   
+   **RM,pr2-force <00 00 00 00>:**&nbsp; By default forces all XHCI ports to route USB2 devices to EHC1.<br>
+   **RM,pr2-init <01>:**&nbsp; Will write RM,pr2-force value at startup if non-zero.<br>
+   **RM,pr2-block <01>:**&nbsp;  Will block writes to XUSB2PR if non-zero.<br>
+   **RM,pr2m-block <01>:**&nbsp; No evidence that OS X drivers attempt to write XUSB2PRM (offset 0xD4), but since this kext relies on a valid value here (as provided by the BIOS), writes to it are blocked if non-zero.<br>
+   **RM,pr2-honor-pr2m <01>:**&nbsp; Changes to XUSB2PR will be masked by XUSB2PRM if this is non-zero.<br>
+   **RM,pr2-chipset-mask:**&nbsp; Writes to XUSB2PR are masked by this value.  This is defined by the chipset documentation.  Default value depends on chipset.
 
 In order to create your own injector, you should be familiar with IOKit matching and kext Info.plist files.  There is ample documentation available on developer.apple.com.  Use the existing injectors as a template to build your own.
 
@@ -251,29 +242,16 @@ Properties supported by FakePCIID and their corresponding PCI configuration spac
 
 For more information on the PCI configuration space: http://en.wikipedia.org/wiki/PCI_configuration_space
 
-### Build Environment
-
-My build environment is currently Xcode 6.1, using SDK 10.6, targeting OS X 10.6.
-
-### 32-bit Builds
-
-This project does not support 32-bit builds, although it is probably not difficult to build one given the proper tools.
-
-### Source Code:
-
-The source code is maintained at the following sites:
-
-https://bitbucket.org/RehabMan/os-x-fake-pci-id
-
-https://github.com/RehabMan/OS-X-Fake-PCI-ID
 
 ### History
 
+The RehabMan source code is located below:
+
+https://github.com/RehabMan/OS-X-Fake-PCI-ID<br>
+https://bitbucket.org/RehabMan/os-x-fake-pci-id
+
+The original repo is here: https://github.com/the-darkvoid/OS-X-Fake-PCI-ID
+
 This kext was forked from the project originally named IntelHDMobileGraphics, and was first discussed here: http://www.tonymacx86.com/yosemite-laptop-support/145427-fix-intel-hd4400-hd4600-mobile-yosemite-47.html#post952079
 
-The original repo is now renamed: https://github.com/the-darkvoid/OS-X-Fake-PCI-ID
-
 So, originally a single purpose kext for Intel HD46000 graphics, it has been modified into a general purpose kext that can be used in many different scenarios.
-
-Note: So far, https://github.com/the-darkvoid/OS-X-Fake-PCI-ID, and https://github.com/RehabMan/OS-X-Fake-PCI-ID are being kept in sync.
-
