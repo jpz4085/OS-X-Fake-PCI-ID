@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Source Code</key>
-	<string>https://github.com/RehabMan/FakePCIID</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.rehabman.injector.FakePCIID-AR9280-as-AR946x</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -39,6 +37,25 @@
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.FakePCIID</string>
+			<key>FakeProperties</key>
+			<dict>
+				<key>RM,device-id</key>
+				<data>
+				KgAAAA==
+				</data>
+				<key>RM,subsystem-id</key>
+				<data>
+				jwAAAA==
+				</data>
+				<key>RM,subsystem-vendor-id</key>
+				<data>
+				axAAAA==
+				</data>
+				<key>RM,vendor-id</key>
+				<data>
+				jBYAAA==
+				</data>
+			</dict>
 			<key>IOClass</key>
 			<string>FakePCIID</string>
 			<key>IOMatchCategory</key>
@@ -47,20 +64,11 @@
 			<string>0x0034168c 0x002a168c</string>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-			<key>FakeProperties</key>
-			<dict>
-				<key>RM,device-id</key>
-				<data>KgAAAA==</data>
-				<key>RM,vendor-id</key>
-				<data>jBYAAA==</data>
-				<key>RM,subsystem-id</key>
-				<data>jwAAAA==</data>
-				<key>RM,subsystem-vendor-id</key>
-				<data>axAAAA==</data>
-			</dict>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Network-Root</string>
+	<key>Source Code</key>
+	<string>https://github.com/RehabMan/FakePCIID</string>
 </dict>
 </plist>

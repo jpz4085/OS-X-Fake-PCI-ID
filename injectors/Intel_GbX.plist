@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Source Code</key>
-	<string>https://github.com/RehabMan/FakePCIID</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.rehabman.injector.FakePCIID-Intel-GbX</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -22,6 +20,13 @@
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>org.rehabman.driver.FakePCIID</string>
+			<key>FakeProperties</key>
+			<dict>
+				<key>RM,subsystem-id</key>
+				<data>
+				CgAAAA==
+				</data>
+			</dict>
 			<key>IOClass</key>
 			<string>FakePCIID</string>
 			<key>IOMatchCategory</key>
@@ -30,14 +35,11 @@
 			<string>0x10c68086 0x10c78086 0x10c88086 0x10ec8086 0x10d88086 0x10fb8086 0x10f18086 0x151c8086 0x150b8086 0x15288086 0x10fc8086 0x15608086</string>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-			<key>FakeProperties</key>
-			<dict>
-				<key>RM,subsystem-id</key>
-				<data>CgAAAA==</data>
-			</dict>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Network-Root</string>
+	<key>Source Code</key>
+	<string>https://github.com/RehabMan/FakePCIID</string>
 </dict>
 </plist>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -412,7 +412,8 @@
 		D4096F771A52FCEC005C037A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = nobody;
 				TargetAttributes = {
 					8431923C1A5890E80022C7A1 = {
@@ -440,11 +441,11 @@
 			};
 			buildConfigurationList = D4096F7A1A52FCEC005C037A /* Build configuration list for PBXProject "FakePCIID" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = D4096F761A52FCEC005C037A;
 			productRefGroup = D4096F811A52FCED005C037A /* Products */;
@@ -584,9 +585,11 @@
 		8410332E1B3F629E00349B75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/XHCIMux.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-XHCIMux";
+				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.driver.FakePCIID.XHCIMux;
 				PRODUCT_NAME = FakePCIID_XHCIMux;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -595,9 +598,11 @@
 		8410332F1B3F629E00349B75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/XHCIMux.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-XHCIMux";
+				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.driver.FakePCIID.XHCIMux;
 				PRODUCT_NAME = FakePCIID_XHCIMux;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -606,9 +611,11 @@
 		843192461A5890E80022C7A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/AR9280_as_AR946x.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-AR9280-as-AR946x";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-AR9280-as-AR946x";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -617,9 +624,11 @@
 		843192471A5890E80022C7A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/AR9280_as_AR946x.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-AR9280-as-AR946x";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-AR9280-as-AR946x";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -628,9 +637,11 @@
 		843192561A58913C0022C7A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Intel_HD_Graphics.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Intel-HD-Graphics";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-HD-Graphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -639,9 +650,11 @@
 		843192571A58913C0022C7A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Intel_HD_Graphics.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Intel-HD-Graphics";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-HD-Graphics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -650,9 +663,11 @@
 		D405EF7B1A5910E000547072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Broadcom_WiFi.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Broadcom-WiFi";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Broadcom-WiFi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -661,9 +676,11 @@
 		D405EF7C1A5910E000547072 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Broadcom_WiFi.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Broadcom-WiFi";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Broadcom-WiFi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -674,16 +691,44 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = x86_64;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"LOGNAME=\\\"${LOGNAME}\\\"",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = FakePCIID/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MODULE_VERSION = 1.3.15;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
@@ -695,12 +740,38 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = x86_64;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = "LOGNAME=\\\"${LOGNAME}\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = FakePCIID/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MODULE_VERSION = 1.3.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -711,10 +782,12 @@
 		D4096F8C1A52FCED005C037A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FakePCIID/Info.plist;
 				MODULE_NAME = org.rehabman.driver.FakePCIID;
+				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.driver.FakePCIID;
 				PRODUCT_NAME = FakePCIID;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -723,10 +796,12 @@
 		D4096F8D1A52FCED005C037A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FakePCIID/Info.plist;
 				MODULE_NAME = org.rehabman.driver.FakePCIID;
+				PRODUCT_BUNDLE_IDENTIFIER = org.rehabman.driver.FakePCIID;
 				PRODUCT_NAME = FakePCIID;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -735,9 +810,11 @@
 		D410AA9D1A8A2BC6007FD343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Intel_GbX.plist;
 				MODULE_NAME = rehabman.FakePCIID_Intel_GbX;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-GbX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -746,9 +823,11 @@
 		D410AA9E1A8A2BC6007FD343 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/Intel_GbX.plist;
 				MODULE_NAME = rehabman.FakePCIID_Intel_GbX;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-GbX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -757,9 +836,11 @@
 		D43DC8701A7FA6E5004B2D06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/BCM57XX_as_BCM57765.plist;
 				MODULE_NAME = rehabman.FakePCIID_BCM57XX_as_BCM57765;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.BCM57XX-as-BCM57765";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -768,9 +849,11 @@
 		D43DC8711A7FA6E5004B2D06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = injectors/BCM57XX_as_BCM57765.plist;
 				MODULE_NAME = rehabman.FakePCIID_BCM57XX_as_BCM57765;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.BCM57XX-as-BCM57765";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -779,12 +862,14 @@
 		D4E2029C1A81305400C5C62D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = injectors/Intel_HDMI_Audio.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Intel-HDMI-Audio";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-HDMI-Audio";
 				PRODUCT_NAME = FakePCIID_Intel_HDMI_Audio;
 			};
 			name = Debug;
@@ -792,11 +877,13 @@
 		D4E2029D1A81305400C5C62D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = injectors/Intel_HDMI_Audio.plist;
 				MODULE_NAME = "org.rehabman.injector.FakePCIID-Intel-HDMI-Audio";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rehabman.injector.FakePCIID-Intel-HDMI-Audio";
 				PRODUCT_NAME = FakePCIID_Intel_HDMI_Audio;
 			};
 			name = Release;
