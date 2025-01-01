@@ -27,6 +27,9 @@ extern kmod_info_t kmod_info;
 
 OSDefineMetaClassAndStructors(FakePCIID, IOService);
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 void FakePCIID::mergeFakeProperties(IOService* provider, const char *name, bool force)
 {
     if (OSDictionary *providerDict = (OSDictionary*)getProperty(name))

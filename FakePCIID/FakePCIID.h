@@ -24,6 +24,9 @@
 #include <IOKit/IOService.h>
 #include <IOKit/pci/IOPCIDevice.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 class FakePCIID : public IOService
 {
     OSDeclareDefaultStructors(FakePCIID);

@@ -30,6 +30,9 @@
 
 #include <IOKit/pci/IOPCIDevice.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 // We want ioreg to still see the normal class hierarchy for hooked
 // provider IOPCIDevice
 //

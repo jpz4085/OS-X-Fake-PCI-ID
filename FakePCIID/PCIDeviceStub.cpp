@@ -22,6 +22,9 @@
 #include "PCIDeviceStub.h"
 #include "FakePCIID.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 hack_OSDefineMetaClassAndStructors(PCIDeviceStub, IOPCIDevice);
 
 int PCIDeviceStub::getIntegerProperty(IORegistryEntry* entry, const char *aKey, const char *alternateKey)
